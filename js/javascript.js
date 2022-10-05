@@ -1,4 +1,4 @@
-var grupoTarjetas = ["🦄", "🍦", "🌈", "👽", "👾", "🤖", "👹"];
+var grupoTarjetas = ["🦄", "🤡", "🤬", "🥵", "🤖", "🎃", "🐸"];
 
 var totalTarjetas = grupoTarjetas.concat(grupoTarjetas);
 
@@ -34,13 +34,13 @@ var totalTarjetas = grupoTarjetas.concat(grupoTarjetas);
 
             tarjeta.innerHTML = 
             
-            "<div class='tarjeta'>" +
+            "<div class='tarjeta' data-valor= " + 
+            emoji +
+            ">" +
                 "<div class='tarjeta__contenido'>" +
                 emoji +
                 "</div>" +
-            "</div>"
-            ;
-            emoji;
+            "</div>";
 
             mesa.appendChild(tarjeta);
         
@@ -48,14 +48,50 @@ var totalTarjetas = grupoTarjetas.concat(grupoTarjetas);
     }
 
 
-    function descubrir() {
+function descubrir() {
+        var descubiertas;
+        var totalDescubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
 
-        var totalDescubiertas = document.querySelectorAll(".descubierta");
-
-        console.log(totalDescubiertas);
+        if (totalDescubiertas.length > 1) {
+            return;
+        }
 
         this.classList.add("descubierta");
+
+
+        descubiertas = document.querySelectorAll(".descubierta:not(.acertada)");
+
+        if (descubiertas.length < 2) {
+            return;
+        }
+
+       
+comparar(descubiertas);
     }
+
+    function comparar(tarjetasAcomparar) {
+
+ if (tarjetasAcomparar[0].dataset.valor === tarjetasAcomparar[1].dataset.valor) {
+            acierto(tarjetasAcomparar);
+        }else {
+           error(tarjetasAcomparar); 
+        }
+
+    }
+
+    function acierto(lasTarjetas) {
+        lasTarjetas.forEach(function(emoji){
+            emoji.classList.add("acertada");
+        });
+    }
+
+    function error(lasTarjetas) {
+
+        lasTarjetas.forEach(function(emoji){
+            emoji.classList.remove("descubierta");
+        });
+    }
+
 
     reparteTarjetas();
 
