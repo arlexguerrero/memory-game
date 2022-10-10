@@ -184,6 +184,7 @@ main {
 
 .sube-nivel,
 .game-over,
+.feedback,
 .end-game {
   display: none;
   position: absolute;
@@ -196,7 +197,8 @@ main {
 
 .sube-nivel.visible,
 .game-over.visible,
-.end-game.visible{
+.end-game.visible,
+.feedback.visible{
   display: flex;
 }
 
