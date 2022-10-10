@@ -1,34 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Domestika</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600"
+      rel="stylesheet"
+    />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="css/4.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Domestika</title>
-  <link href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:600" rel="stylesheet" />
-  <link href="css/site.css" rel="stylesheet" />
-  <link href="css/4.css" rel="stylesheet" />
-</head>
+  <body>
+    <header class="cabecera">
+      <div class="contadores">
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Movimientos</h4>
+          <div class="cabecera-num">
+            <span id="mov">00</span>/ <span id="mov-total">20</span>
+          </div>
+        </div>
+        <div class="contador-item">
+          <h4 class="cabecera-titulo">Tiempo</h4>
+          <div class="cabecera-num">
+            <span id="minutos">00</span>: <span id="segundos"> 00</span>
+          </div>
+        </div>
+      </div>
+    </header>
 
-<body>
-  <div class="contador-item">
-    <h4 class="cabecera-titulo" >Tiempo</h4>
-    <div class="cabecera-num">
-      <span id="minutos">00</span>: <span id="segundos"> 00</span>
-    </div>
-  </div>
-  <main>
-    <div id="mesa" class="mesa">
+    <main>
+      <div id="mesa" class="mesa"></div>
+      <div id="feedback" class="feedback">
+        <div class="modal">
+          <h2>¡Buen trabajo</h2>
+          <button id="reiniciar" class="reiniciar">Reiniciar?</button>
+        </div>
+      </div>
+    </main>
 
-    </div>
-  </main>
-
-  <script src="js/variables-globales.js"></script>
-  <script src="js/baraja-reparte.js"></script>
-  <script src="js/descubrir-comparar.js"></script>
-  <script src="js/acierto-error.js"></script>
-  <script src="js/iniciar.js"></script>
-  <script src="js/cronometro.js"></script>
-</body>
-
-</html>  
+    <script src="js/variables-globales.js"></script>
+    <script src="js/baraja-reparte.js"></script>
+    <script src="js/descubrir-comparar.js"></script>
+    <script src="js/acierto-error.js"></script>
+    <script src="js/contador.js"></script>
+    <script src="js/cronometro.js"></script>
+    <script src="js/iniciar.js"></script>
+  </body>
+</html>
