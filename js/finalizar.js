@@ -1,3 +1,3 @@
 function finalizar() {
-    document.querySelector("#feedback").classList.add("visible");
+    document.querySelector("#subeNivel").classList.add("visible");
 }
