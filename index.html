@@ -16,6 +16,13 @@
   </head>
 
   <body>
+    <div id="bienvenida" class="bienvenida">
+      <h1>👋 ¡Hola! 👋</h1>
+      <div class="bienvenida-botones">
+        <button type="submit">¡Quiero jugar!</button>
+        <button type="submit">Modo relax</button>
+      </div>
+    </div>
     <header class="cabecera">
       <div class="contadores">
         <div class="contador-item">
@@ -61,6 +68,23 @@
         </div>
       </div>
     </main>
+    <audio src="sonidos/acierto.mp3" 
+    class="sonido" 
+    id="sonido-acierto" 
+    preload="auto" 
+    controls></audio>
+
+    <audio src="sonidos/error.mp3" 
+    class="sonido" 
+    id="sonido-error" 
+    preload="auto" 
+    controls></audio>
+
+    <audio src="sonidos/carta.mp3" 
+    class="sonido" 
+    id="sonido-carta" 
+    preload="auto" 
+    controls></audio>
 
     <script src="js/variables-globales.js"></script>
     <script src="js/baraja-reparte.js"></script>
