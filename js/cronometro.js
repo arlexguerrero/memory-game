@@ -3,12 +3,9 @@ function iniciarCronometro() {
    var minutos = 0;
    var segundosTexto;
    var minutosTexto;
-   var cronometro;
-
 
 function actualizaContador() {
-
-    console.log(segundos);
+ 
     segundos--;
 
     if (segundos < 0) {
@@ -20,15 +17,16 @@ function actualizaContador() {
         segundos = 0;
         minutos = 0;
         clearInterval(cronometro);
+        timeOver();
 }
 
     segundosTexto = segundos;
     minutosTexto = minutos;
     if (segundos < 10) {
-        segundosTexto = '0' + segundos;
+        segundosTexto = "0" + segundos;
     }
     if (minutos < 10) {
-        minutosTexto = '0' + minutos;
+        minutosTexto = "0" + minutos;
     }
 
     document.querySelector('#minutos').innerText = minutosTexto;
