@@ -5,7 +5,7 @@ function escribeNiveles() {
         controlNivel.innerHTML = 
         "<button class='nivel' data-nivel=" + 
         indice + 
-        "> Nivel" + 
+        "> Nivel " + 
         (indice + 1) + 
         "</button>";
         menuNiveles.appendChild(controlNivel); 
@@ -22,21 +22,23 @@ function cambiaNivel() {
 function muestraMenuNiveles(evento) {
     evento.stopPropagation();
     document.querySelector(".selecciona-nivel").classList.toggle("visible");
-}
+  }
+
 
 function ocultaMenuNiveles(evento) {
     document.querySelector(".selecciona-nivel").classList.remove("visible");
 }
 
 function clickFueraDeMenu(evento) {
-    if (evento.target.closet(".selecciona-nivel")) {
+    if (evento.target.closest(".selecciona-nivel")) {
         return;
     }
     document.querySelector(".selecciona-nivel").classList.remove("visible");
 }
 
 function teclaEscCierraMenu(evento) {
-    if(evento.key === "Escape") {
+    console.log(evento.key);
+    if (evento.key === "Escape") {
         ocultaMenuNiveles();
     }
 }

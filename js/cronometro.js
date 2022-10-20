@@ -1,4 +1,4 @@
-function iniciarCronometro() {
+function iniciaCronometro() {
    var segundos = 10;
    var minutos = 0;
    var segundosTexto;

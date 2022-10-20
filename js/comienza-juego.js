@@ -15,12 +15,12 @@ document
     .querySelector("#juego-relax")
     .addEventListener("click", iniciaJuegoRelax);
 
-document
-    .querySelector("#controlNivel")
-    .addEventListener("click", muestaMenuNiveles);
+    document
+    .querySelector("#control-nivel")
+    .addEventListener("click", muestraMenuNiveles);
 
 document
-    .querySelector("#cierraNiveles")
+    .querySelector("#cierra-niveles")
     .addEventListener("click", ocultaMenuNiveles);
 
 document.querySelectorAll(".nivel").forEach(function(elemento){
@@ -35,4 +35,4 @@ document.querySelector("body").addEventListener("click", clickFueraDeMenu);
 document.addEventListener("keydown", teclaEscCierraMenu);
 
 //Mostramos pantalla de bienvenida
-document.querySelector("#bienida").classList.add("visible");
+document.querySelector("#bienvenida").classList.add("visible");
